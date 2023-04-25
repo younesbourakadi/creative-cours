@@ -1,7 +1,14 @@
 // -----------------------------------
 console.log("1/ Implémentez une fonction qui transforme un texte en camelCase.");
-
-console.log();
+function toCamelCase(str) {
+  let words = str.split(/[\s_.,-]+/); 
+  for (let i = 1; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+  }
+  let wordsJoined = words.join('');
+  return wordsJoined.charAt(0).toLowerCase() + wordsJoined.slice(1);
+}
+console.log(toCamelCase('Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'));
 
 // -----------------------------------
 console.log("2/ Implémentez une fonction qui retroune le plus grand mot d'un texte.");
@@ -32,17 +39,17 @@ console.log();
 console.log("7/ Retournez la liste des prenoms des joueurs ci-dessous par ordre de score décroissant.");
 
 const players  = {
-    Camille: 88,
-    Lola: 125,
-    Isaac: 174,
-    Aldrick: 426,
-    Ismaël: 248,
-    Lilian: 478,
-    Charley: 225,
-    Thierry: 255,
-    Cameron: 205,
-    Tanguy: 155,
-    Jenny: 125
+  Camille: 88,
+  Lola: 125,
+  Isaac: 174,
+  Aldrick: 426,
+  Ismaël: 248,
+  Lilian: 478,
+  Charley: 225,
+  Thierry: 255,
+  Cameron: 205,
+  Tanguy: 155,
+  Jenny: 125
 };
 
 console.log();
