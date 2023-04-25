@@ -28,8 +28,27 @@ console.log(getLongestWordInString('Lorem ipsum dolor sit amet, qui minim labore
 
 // -----------------------------------
 console.log("3/ Implémentez une fonction qui converti un nombre de seconde en un tableau exprimant cette durée en secondes, minutes, heures, jours, semaines et années.");
+function convertSecondsToTimeUnits(s){
 
-console.log();
+  let years = Math.floor(s / 31536000);
+  let months = Math.floor((s % 31536000) / 2628000);
+  let days = Math.floor(((s % 31536000) % 2628000) / 86400);
+  let weeks = Math.floor(((s % 31536000) % 2628000) / 604800);
+  let hours = Math.floor((s % (3600 * 24)) / 3600);
+  let minutes = Math.floor((s % 3600) / 60);
+  let seconds = Math.floor(s % 60);
+  let table = {
+    seconds,
+    minutes,
+    hours,
+    days,
+    weeks,
+    months,
+    years
+  }
+return table;
+}
+console.table(convertSecondsToTimeUnits(788990829374823748237492));
 
 // -----------------------------------
 console.log("4/ Implémentez une fonction qui prend en paramètre un tableau retourné par la fonction précédente et retourne la chaîne de caractère correspondante.");
