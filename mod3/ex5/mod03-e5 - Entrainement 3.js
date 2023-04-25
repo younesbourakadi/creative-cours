@@ -1,7 +1,7 @@
 // -----------------------------------
 console.log("1/ Implémentez une fonction qui transforme un texte en camelCase.");
 function toCamelCase(str) {
-  let words = str.split(/[\s_.,-]+/); 
+  let words = str.split(/[\s_.,-]+/g); 
   for (let i = 1; i < words.length; i++) {
     words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
   }
