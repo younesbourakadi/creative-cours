@@ -65,8 +65,13 @@ console.log(getWordOccurenceInSentence('Lorem ipsum dolor sit amet, qui minim la
 
 // -----------------------------------
 console.log("6/ Implémentez une fonction qui retourne les X plus grandes valeurs d'un tableau.");
+let nLargestValues = [];
+function getNlargestValuesFromArray(arr, n) {
+  return arr.sort((a, b) => b - a).slice(0, n);
+  
+}
 
-console.log();
+console.log(getNlargestValuesFromArray([1, 3, 33, 0, -2, 300, 10, 3], 3));
 
 // -----------------------------------
 console.log("7/ Retournez la liste des prenoms des joueurs ci-dessous par ordre de score décroissant.");
