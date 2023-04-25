@@ -48,7 +48,7 @@ function convertSecondsToTimeUnits(s){
   }
 return table;
 }
-console.table(convertSecondsToTimeUnits(788990829374823748237492));
+console.table(convertSecondsToTimeUnits(788990829374823742));
 
 // -----------------------------------
 console.log("4/ Implémentez une fonction qui prend en paramètre un tableau retourné par la fonction précédente et retourne la chaîne de caractère correspondante.");
@@ -57,8 +57,11 @@ console.log();
 
 // -----------------------------------
 console.log("5/ Implémentez une fonction qui compte dans le texte en premier paramètre, le nombre d'occurence de la lettre en second paramètre.");
-
-console.log();
+function getWordOccurenceInSentence(sentence, word){
+  return sentence.split(word).length - 1;
+  
+}
+console.log(getWordOccurenceInSentence('Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.', 'sint'));
 
 // -----------------------------------
 console.log("6/ Implémentez une fonction qui retourne les X plus grandes valeurs d'un tableau.");
