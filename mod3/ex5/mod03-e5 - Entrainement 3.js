@@ -12,8 +12,19 @@ console.log(toCamelCase('Lorem ipsum dolor sit amet, qui minim labore adipisicin
 
 // -----------------------------------
 console.log("2/ Implémentez une fonction qui retroune le plus grand mot d'un texte.");
-
-console.log();
+function getLongestWordInString(str){
+  let words = str.split(/[\s_.,-]+/); 
+  let wordLength = 0;
+  let longestWord;
+  for (const word in words) {
+     if (words[word].length > wordLength){
+      wordLength = words[word].length;
+      longestWord = words[word];
+    } 
+  }
+  return longestWord;
+}
+console.log(getLongestWordInString('Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'));
 
 // -----------------------------------
 console.log("3/ Implémentez une fonction qui converti un nombre de seconde en un tableau exprimant cette durée en secondes, minutes, heures, jours, semaines et années.");
