@@ -17,7 +17,7 @@ function getLongestWordInString(str){
   let wordLength = 0;
   let longestWord;
   for (const word in words) {
-     if (words[word].length > wordLength){
+    if (words[word].length > wordLength){
       wordLength = words[word].length;
       longestWord = words[word];
     } 
@@ -46,7 +46,7 @@ function convertSecondsToTimeUnits(s){
     months,
     years
   }
-return table;
+  return table;
 }
 console.table(convertSecondsToTimeUnits(788990829374823742));
 
@@ -59,7 +59,7 @@ console.log();
 console.log("5/ Implémentez une fonction qui compte dans le texte en premier paramètre, le nombre d'occurence de la lettre en second paramètre.");
 function getWordOccurenceInSentence(sentence, word){
   return sentence.split(word).length - 1;
-  
+
 }
 console.log(getWordOccurenceInSentence('Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.', 'sint'));
 
@@ -68,7 +68,7 @@ console.log("6/ Implémentez une fonction qui retourne les X plus grandes valeur
 let nLargestValues = [];
 function getNlargestValuesFromArray(arr, n) {
   return arr.sort((a, b) => b - a).slice(0, n);
-  
+
 }
 
 console.log(getNlargestValuesFromArray([1, 3, 33, 0, -2, 300, 10, 3], 3));
@@ -90,7 +90,15 @@ const players  = {
   Jenny: 125
 };
 
-console.log();
+function sortDescendingPlayers(arr){
+  let sortedPlayers = [];
+  for (let player in arr) {
+    sortedPlayers.push([player, arr[player]]);
+  }
+  return sortedPlayers.sort((a, b) => b[1] - a[1]);
+}
+
+console.log(sortDescendingPlayers(players));
 
 // -----------------------------------
 console.log("8/ Dans la liste des scores ci-dessus sélectionnez une partie des meilleurs joueurs jusqu'à obtenir un total de score des joueurs sélectionnés de 1000.");
